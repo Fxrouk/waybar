@@ -1,0 +1,340 @@
+/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+/* ....[Colorful] Stolen ......... */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    min-height: 0;  
+    font-size: 98%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.empty,
+window#waybar.empty #window {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0px;
+  border: 0px;
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-cycle_wall,
+#custom-github,
+#custom-hyprWindowMode,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-menu,
+#custom-power,
+#custom-power_vertical,
+#custom-speaker,
+#custom-swaync,
+#custom-updater,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+#workspaces button {
+  padding-left: 10px;
+  padding-right: 10px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.1s linear;
+}
+
+#workspaces button.persistent {
+  color: #9E01DF;
+}
+
+#workspaces button.empty {
+  color: #9E01DF;
+}
+
+#workspaces button.active {
+  color: #9E01DF;
+  border: 2px solid #9E01DF;
+  border-radius: 16px;
+}
+
+#workspaces button.urgent {
+  color: #9E01DF;
+  border: 2px solid #9E01DF;
+  border-radius: 16px;
+}
+
+#workspaces button:hover {
+  border: 2px solid #9E01DF;
+  border-radius: 16px;
+}
+
+#idle_inhibitor {
+  color: #9E01DF;
+}
+
+#backlight {
+  color: #9E01DF;
+}
+
+#bluetooth {
+  color: #9E01DF;
+}
+
+#clock {
+  color: #9E01DF;
+  padding-right: 7px;
+}
+
+#custom-swaync {
+  color: #9E01DF;
+  border: 2px solid #9E01DF;
+  border-radius: 20px;
+  padding-left: 13px;
+  padding-right: 12px;
+}
+
+#custom-keyboard {
+  color: #9E01DF;
+  border: 2px solid #9E01DF;
+  border-radius: 20px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#custom-cycle_wall {
+  color: #c0caf5;
+  padding-left: 7px;
+  padding-right: 4px;
+}
+
+#custom-hint {
+  color: #9E01DF;
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+#custom-github {
+  color: #c0caf5;
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+#custom-hyprWindowMode {
+  color: #c0caf5;
+  padding-left: 6px;
+}
+
+#custom-niflveil {
+  color: #9E01DF;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+#custom-niflveil.empty {
+  color: #c0caf5;
+}
+
+#cpu {
+  padding-left: 10px;
+  padding-right: 3px;
+  color: #9E01DF;
+  border-top: 2px solid #455a64;
+  border-bottom: 2px solid #455a64;
+  border-left: 2px solid #455a64;
+  border-radius: 20px 0px 0px 20px;
+}
+
+#memory {
+  color: #9E01DF;
+  padding-right: 8px;
+  border-bottom: 2px solid #455a64;
+  border-top: 2px solid #455a64;
+  border-radius: 0px;
+}
+
+#temperature {
+  color: #9E01DF;
+  border-bottom: 2px solid #455a64;
+  border-top: 2px solid #455a64;
+  border-radius: 0px;
+}
+
+#disk {
+  padding-right: 16px;
+  color: #9E01DF;
+  border-top: 2px solid #455a64;
+  border-bottom: 2px solid #455a64;
+  border-right: 2px solid #455a64;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#temperature.critical {
+  background-color: #9E01DF;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#keyboard-state {
+  color: #9E01DF;
+}
+
+#custom-cava_mviz {
+  color: #9E01DF;
+}
+
+#custom-menu {
+  color: #9E01DF;
+  padding-left: 14px;
+  padding-right: 12px;
+}
+
+#custom-power {
+  color: #9E01DF;
+  padding-left: 8px;
+  padding-right: 17px;
+}
+
+#custom-updater {
+  color: #9E01DF;
+  border: 2px solid #455a64;
+  border-radius: 20px;
+  padding-left: 10pt;
+  padding-right: 12px;
+}
+
+#custom-light_dark {
+  color: #9E01DF;
+}
+
+#custom-weather {
+  color: #9E01DF;
+}
+
+#custom-speaker {
+  color: #9E01DF;
+}
+
+#pulseaudio {
+  color: #9E01DF;
+}
+
+#pulseaudio.bluetooth {
+  color: #9E01DF;
+}
+
+#pulseaudio.muted {
+  color: #9E01DF;
+}
+
+#window {
+  font-size: 100%;
+  color: #9E01DF;
+}
+
+#mpris {
+  color: #9E01DF;
+}
+
+#network {
+  color: #9E01DF;
+}
+
+#network.disconnected,
+#network.disabled {
+  background-color: #c0caf5;
+  color: #000000;
+}
+
+#pulseaudio-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 5px;
+}
+
+#backlight-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough {
+  min-width: 80px;
+  min-height: 10px;
+  border-radius: 5px;
+}
+
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+}
+
+#custom-separator {
+  padding-left: 6px;
+  color: #9E01DF;
+}

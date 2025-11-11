@@ -1,0 +1,915 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Translucent */
+
+/* Couleurs principales */
+@define-color critical #9E01DF;
+@define-color warning #9E01DF;
+@define-color fgcolor #ffffff;
+@define-color bgcolor #222436;
+@define-color alert   #9E01DF;
+
+/* Plus d'accents multiples → une seule couleur */
+@define-color accent1 #9E01DF;
+@define-color accent2 #9E01DF;
+@define-color accent3 #9E01DF;
+@define-color accent4 #9E01DF;
+@define-color accent5 #9E01DF;
+@define-color accent6 #9E01DF;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 98%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+tray {
+    color:#FFFFFF;
+}
+window#waybar {
+    background-color: rgba(0,0,0,0.3);
+    color: #9E01DF;
+    transition-property: background-color;
+    transition-duration: .1s;
+    border-radius: 10px;
+}
+
+window#waybar.hidden {
+    opacity: 0.1;
+}
+
+tooltip {
+    background: #1e1e2e;
+    opacity: 0.6;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+/* ----- Boutons & Workspaces ----- */
+#taskbar button,
+#workspaces button {
+    background-color: transparent;
+    color: #FFFFFF;
+    box-shadow: none;
+    text-shadow: none;
+
+
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: @accent1;
+}
+
+#workspaces button.focused {
+    background-color: rgba(158, 1, 223, 0.2);
+    color: @accent1;
+}
+
+#workspaces button.urgent {
+    background-color: transparent;
+}
+
+#workspaces {
+    background-color:#6B00A8;
+
+}
+/* ----- Mode ----- */
+#mode {
+    background-color: rgba(158, 1, 223, 0.3);
+    border-bottom: 3px solid #ffffff;
+}
+
+/* ----- Modules principaux ----- */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-left-slant,
+#custom-right-slant,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+/* ----- Spécialisation des modules ----- */
+#clock {
+    color: #FFFFFF;
+    background-color:#6B00A8;
+
+    padding-right:5px;
+
+}
+
+
+#custom-updater {
+    color: @accent1;
+}
+
+#custom-battery-status {
+    color: #FFFFFF;
+    background-color:#6B00A8;
+    padding:4px;
+
+}
+
+@keyframes blink {
+    to {
+        background-color: #FF0000;
+        color: #FFFFFF;
+    }
+}
+
+@keyframes blink-slash {
+    to {
+        color: #FF0000;
+
+    }
+}
+@keyframes blink-autre {
+    to {
+        color: #FF0000;
+        color: #FFA500;
+    }
+}
+
+@keyframes blink-chargement {
+    to {
+        color: #FF0000;
+        color: #9E01DF;
+    }
+}
+#battery.critical:not(.charging) {
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#custom-volume {
+    color:#FFFFFF;
+    background-color:#6B00A8;
+
+}
+
+#custom-volume.volume-blink {
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#custom-rond-left.volume-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-slash-volume.volume-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes rainbow-chargement {
+    to {
+        background-color: #006600;
+        color: #FFFFFF;
+    }
+}
+@keyframes rainbow-chargement-slash {
+    to {
+
+        color: #006600;
+    }
+}
+
+#menu {
+    font-size: 98%;
+}
+#battery.charging {
+    animation-name: rainbow-chargement;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging.critical {
+    animation-name: rainbow-chargement;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-status.battery-charging{
+    background-color:#9E01Df;
+}
+#custom-battery-slash-gauche.battery-charging{
+    color:#9E01DF;
+}
+#custom-battery-slash-droite.battery-charging{
+    color:#9E01DF;
+}
+
+#custom-battery-status.battery-blink{
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#battery.charging:not(.good) {
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#battery.warning:not(.charging) {
+    color: #FF5000;
+    animation-name: blink-autre;
+    animation-duration: 1s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-menu {
+    font-size: 150%;
+    color: #FFFFFF;
+}
+
+#custom-keyboard,
+
+
+#memory {
+    color: @accent1;
+}
+
+#backlight {
+    color: @accent1;
+}
+
+#bluetooth {
+    color: #9E01DF;
+}
+
+#network {
+    color: #9E01DF;
+}
+
+#network.disconnected {
+    color: @accent1;
+}
+
+#pulseaudio {
+    color: @accent1;
+}
+
+#pulseaudio-muted {
+    color: @accent1;
+}
+
+#wireplumber {
+    color: @accent1;
+}
+
+#wireplumber-muted {
+    color: @accent1;
+}
+
+#pluseaudio-source-muted {
+    color: @accent1;
+}
+
+#custom-power {
+    color: @accent1;
+}
+
+#disk {
+    color: @accent1;
+}
+
+#custom-power_profile {
+    color: @accent1;
+}
+
+#custom-media {
+    background-color: @accent1;
+    color: #ffffff;
+    min-width: 100px;
+}
+
+#custom-weather {
+    color: @accent1;
+}
+
+#custom-lock {
+    color: @accent1;
+}
+
+#keyboard-state,
+#custom-temperature {
+    color: #FFFFFF;
+    background-color:#6B00A8;
+    padding:3px;
+}
+ 
+#cpu {
+    color: #FFFFFF;
+    background-color:#6B00A8;
+}
+
+#custom-temperature.temperature-blink {
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpum.critical {
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#custom-power.warning {
+    color: #FF0000;
+}
+
+/* Tray et autres */
+#tray {
+    color: #9E01DF;
+    background-color:#6B00A8;
+
+}
+
+#custom-hypridle,
+#idle_inhibitor {
+    color: @accent1;
+}
+
+/* Indicateurs */
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+    color: @accent1;
+}
+
+#mpd {
+    color: @accent1;
+}
+
+#mpd.disconnected {
+    background-color: @accent1;
+}
+
+#mpd.stopped {
+    background-color: @accent1;
+}
+
+#mpd.paused {
+    background-color: @accent1;
+}
+
+#custom-language {
+    color: @accent1;
+    min-width: 16px;
+}
+
+#custom-separator {
+    color: @accent1;
+}
+
+/* Sliders */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
+    background-color: #1e1e2e;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: @accent1;
+}
+#custom-left-slant {
+  margin-top: -1px;
+  font-size: 1.55rem;
+  color:#6B00A8;
+
+}
+
+#custom-right-slant {
+  margin-bottom: -1px;
+
+  font-size: 1.55rem;
+  color:#6B00A8;
+}
+
+#custom-cpum {
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.modules-left > widget:first-child > #custom-left-slash {
+    background: @accent;
+	margin-left: -5px;
+}
+
+.modules-right > widget:last-child > #custom-right-slash {
+    background: @accent;
+	margin-right: -15px;
+}
+
+#custom-left-slash {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-right-slash {
+
+	padding: 0;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+}
+
+
+
+#custom-right-slash {
+	padding-right: 0px;
+    color:#6B00A8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modules-left > widget:first-child > #custom-left-slash-bizarre {
+    background: @accent;
+	margin-right: -20px;
+
+}
+
+.modules-right > widget:last-child > #custom-right-slash-bizarre {
+    background: @accent;
+	margin-left: -15px;
+
+}
+
+#custom-left-slash-bizarre {
+	margin: -2;
+
+	padding:2.9;
+	font-size: 26px;
+    color: @accent;
+	background: none;
+}
+#custom-right-slash-bizarre {
+	margin: -3;
+	padding: 3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+}
+
+#custom-left-slash-bizarre {
+	padding-left: 5px;
+    color:#6B00A8;
+    margin-left:-4px;
+
+}
+
+#custom-right-slash-bizarre {
+	padding-right: 5px;
+    margin-right:-4px;
+    color:#6B00A8;
+}
+
+
+
+
+
+.modules-right > widget:last-child > #custom-rond-right {
+    background: @accent;
+	margin-left: -15px;
+
+}
+
+
+#custom-rond-right {
+	margin: -3;
+	padding: 3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+
+}
+
+
+#custom-rond-right {
+	padding-right: 5px;
+    margin-right:-4px;
+    color:#6B00A8;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modules-left > widget:first-child > #custom-rond-left {
+    background: @accent;
+	margin-right: -20px;
+
+}
+
+#custom-rond-left {
+	margin: -2;
+
+	padding:2.9;
+	font-size: 26px;
+    color: @accent;
+	background: none;
+}
+
+
+#custom-rond-left {
+	padding-left: 5px;
+    color:#6B00A8;
+    margin-left:-4px;
+
+}
+
+
+
+.modules-left > widget:first-child > #custom-slash-volume {
+    background: @accent;
+	margin-left: -5px;
+}
+
+
+
+#custom-slash-volume {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+
+
+
+
+.modules-left > widget:first-child > #custom-temperature-slash-gauche {
+    background: @accent;
+	margin-left: -5px;
+}
+
+#custom-temperature-slash-gauche {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-temperature-slash-gauche.temperature-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.modules-left > widget:first-child > #custom-temperature-slash-droite {
+    background: @accent;
+	margin-left: -5px;
+}
+
+#custom-temperature-slash-droite {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-temperature-slash-droite.temperature-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-slash-droite.battery-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-slash-gauche.battery-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-slash-droite {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-battery-slash-gauche {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-battery-status.battery-warning{
+    animation-name: blink-attention;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-slash-droite.battery-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-battery-slash-gauche.battery-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink-attention {
+    to {
+        background-color: #ff7f00;
+        color: #FFFFFF;
+    }
+}
+@keyframes blink-attention-slash {
+    to {
+
+        color: #ff7f00;
+    }
+}
+
+#custom-temperature.temperature-warning {
+    animation-name: blink-attention;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-temperature-slash-gauche.temperature-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-temperature-slash-droite.temperature-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#custom-cpu {
+    color: #FFFFFF;
+    background-color:#6B00A8;
+    padding:4px;
+
+}
+
+#custom-cpu-slash-gauche {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-cpu-rond-gauche {
+	margin: -3;
+	padding:3;
+	font-size: 26.3px;
+    color: @accent;
+	background: none;
+    margin-left:0px;
+	padding-left: 0px;
+    color:#6B00A8;
+}
+
+#custom-cpu.cpu-warning {
+    animation-name: blink-attention;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cpu-slash-gauche.cpu-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cpu-rond-gauche.cpu-warning {
+    animation-name: blink-attention-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cpu.cpu-blink {
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cpu-slash-gauche.cpu-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cpu-rond-gauche.cpu-blink {
+    animation-name: blink-slash;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
