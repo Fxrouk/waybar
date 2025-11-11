@@ -1,0 +1,101 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DEFAULT Laptop  - Top ### //
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "bottom",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"spacing": -1,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+
+
+
+	"custom/rond-right",
+	"custom/separator#blank",
+
+
+
+	"hyprland/workspaces#rw",
+
+    "custom/left-slash-bizarre",
+    "custom/separator#blank_2",
+
+	"custom/separator#blank",
+
+    "custom/right-slash-bizarre",
+	"clock",	
+    "custom/left-slash-bizarre",
+	"custom/separator#blank_2",
+    "custom/slash-volume",
+
+
+
+	"custom/volume",
+	"custom/rond-left",
+	"custom/separator#blank_2",
+
+
+
+
+
+
+
+
+	],
+
+"modules-center": [
+
+
+
+
+
+	"group/notify",
+
+	"group/app_drawer",
+
+
+
+
+	],
+
+"modules-right": [
+
+
+    "custom/separator#blank_2",
+
+
+    "custom/separator#blank_2",
+
+    "custom/battery-slash-gauche",
+	"custom/battery-status",
+    "custom/battery-slash-droite",
+    "custom/separator#blank_2",
+
+    "custom/temperature-slash-gauche",
+
+	"custom/temperature",
+    "custom/temperature-slash-droite",
+    "custom/separator#blank_2",
+    "custom/cpu-slash-gauche",
+    "custom/cpu",
+    "custom/cpu-rond-gauche",
+
+
+
+	],
+}
