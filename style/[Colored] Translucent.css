@@ -274,13 +274,25 @@ tooltip {
 }
 
 #custom-battery-status.battery-charging{
-    background-color:#9E01Df;
+    animation-name: rainbow-chargement;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 #custom-battery-slash-gauche.battery-charging{
-    color:#9E01DF;
+    animation-name: rainbow-chargement-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 #custom-battery-slash-droite.battery-charging{
-    color:#9E01DF;
+    animation-name: rainbow-chargement-slash;
+    animation-duration: 2s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #custom-battery-status.battery-blink{

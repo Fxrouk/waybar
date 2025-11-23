@@ -77,6 +77,10 @@
 
 
     "custom/separator#blank_2",
+    "custom/temperature-slash-gauche",
+
+	"custom/temperature",
+    "custom/temperature-slash-droite",
 
 
     "custom/separator#blank_2",
@@ -84,12 +88,9 @@
     "custom/battery-slash-gauche",
 	"custom/battery-status",
     "custom/battery-slash-droite",
-    "custom/separator#blank_2",
 
-    "custom/temperature-slash-gauche",
 
-	"custom/temperature",
-    "custom/temperature-slash-droite",
+
     "custom/separator#blank_2",
     "custom/cpu-slash-gauche",
     "custom/cpu",
