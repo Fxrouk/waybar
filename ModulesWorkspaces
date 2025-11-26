@@ -198,7 +198,7 @@
 		"title<.*reddit.*>": " ",
 
 
-		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": " ",
+		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "󰈹 ",
 		"class<zen>": "󰰷 ",
 		"class<waterfox|waterfox-bin>": " ",
 		"class<microsoft-edge>": " ",
@@ -265,7 +265,7 @@
 		"class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": "󰨞 ",
 		"class<dev.zed.Zed>": "󰵁",
 		"class<codeblocks>": "󰅩 ",
-		"title<.*github.*>": " ",
+		"title<.*github.*>": " ",
 		"class<mousepad>": " ",
 		"class<libreoffice-writer>": " ",
 		"class<libreoffice-startcenter>": "󰏆 ",
