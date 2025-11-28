@@ -55,6 +55,7 @@ tooltip {
     color: #FFFFFF;
     box-shadow: none;
     text-shadow: none;
+    font-size: 70%;
 
 
 }
@@ -95,7 +96,9 @@ tooltip {
 #backlight-slider,
 #battery,
 #bluetooth,
-#clock,
+#clock {
+    font-size: 105%;
+}
 #cpu,
 #disk,
 #idle_inhibitor,
@@ -115,7 +118,10 @@ tooltip {
 #workspaces,
 #custom-backlight,
 #custom-browser,
-#custom-cava_mviz,
+#custom-cava_mviz {
+    color:#FFFFFF;
+    font-size: 150%;
+}
 #custom-cycle_wall,
 #custom-dot_update,
 #custom-file_manager,
