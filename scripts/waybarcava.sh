@@ -12,7 +12,7 @@ done
 config_file="/tmp/waybar_cava_config_$$"
 cat >"$config_file" <<'EOF'
 [general]
-framerate = 21
+framerate = 60
 bars = 74
 sensibility = 30
 [input]
