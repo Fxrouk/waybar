@@ -55,7 +55,7 @@ cava -p "$config_file" | while IFS= read -r line; do
         left_rev=$(echo "$left" | rev)
         right_rev=$(echo "$right" | rev)
         
-        echo "$left_rev$right_rev"
+        echo "  $left_rev$right_rev"
     fi
 done
 
