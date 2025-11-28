@@ -35,27 +35,26 @@ trap cleanup EXIT
 
 # Lancer Cava et traiter la sortie
 cava -p "$config_file" | while IFS= read -r line; do
-    # Nettoyer la ligne
+
     line_clean="${line//;/}"
     
-    # Vérifier si c'est une ligne vide ou que des zéros
+
     if [[ -z "$line_clean" || "$line_clean" =~ ^0+$ ]]; then
         echo "  ㅤBA10  "
     else
-        # Appliquer les substitutions avec sed
+
         bars_line=$(echo "$line_clean" | sed "$dict")
-        
-        # Inverser les deux moitiés
+
         len=${#bars_line}
         mid=$((len / 2))
-        
+
+        # moitié gauche brute
         left="${bars_line:0:$mid}"
-        right="${bars_line:$mid}"
-        
-        left_rev=$(echo "$left" | rev)
-        right_rev=$(echo "$right" | rev)
-        
-        echo "  $left_rev$right_rev"
+
+        # moitié droite = miroir de la gauche
+        right="$(echo "$left" | rev)"
+
+        echo "  $right$left"
     fi
 done
 
