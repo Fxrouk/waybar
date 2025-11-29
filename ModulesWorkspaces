@@ -199,6 +199,7 @@
 
 
 		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "󰈹 ",
+
 		"class<zen>": "󰰷 ",
 		"class<waterfox|waterfox-bin>": " ",
 		"class<microsoft-edge>": " ",
@@ -210,6 +211,7 @@
 		"class<firefox-developer-edition>": "🦊 ",
 
 		"class<kitty|konsole>": " ",
+		"class<Projet_INFO>": " ",
 		"class<kitty-dropterm>": " ",
 		"class<com.mitchellh.ghostty>": " ",
 		"class<org.wezfurlong.wezterm>": " ",
