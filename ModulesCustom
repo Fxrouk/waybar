@@ -20,13 +20,13 @@
 "custom/temperature-slash-gauche": {
     "exec": "~/.config/waybar/scripts/slashgauchetemperature.sh",
     "return-type": "json",
-    "interval": 3,
+    "interval": 1,
     "tooltip": false
 },
 "custom/temperature-slash-droite": {
     "exec": "~/.config/waybar/scripts/slashdroitetemperature.sh",
     "return-type": "json",
-    "interval": 3,
+    "interval": 1,
     "tooltip": false
 },
 
@@ -77,7 +77,7 @@
 "custom/temperature": {
     "exec": "~/.config/waybar/scripts/temperature.sh",
     "return-type": "json",
-    "interval": 3,
+    "interval": 1,
     "tooltip": false
 },
 
