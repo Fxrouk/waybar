@@ -50,14 +50,14 @@ fi
 if [[ "$CLASS" == "cpu-blink" && ! -f "$CPU_BLINK_RELOAD_FILE" ]]; then
     touch "$CPU_BLINK_RELOAD_FILE"
     # Relancer waybar de manière asynchrone
-    nohup bash -c "killall waybar; sleep 0.2; waybar" > /dev/null 2>&1 &
+
 fi
 
 # Relancer waybar seulement si cpu-warning ET pas déjà fait
 if [[ "$CLASS" == "cpu-warning" && ! -f "$CPU_WARNING_RELOAD_FILE" ]]; then
     touch "$CPU_WARNING_RELOAD_FILE"
     # Relancer waybar de manière asynchrone
-    nohup bash -c "killall waybar; sleep 0.2; waybar" > /dev/null 2>&1 &
+
 fi
 
 # Supprimer les fichiers si on n'est plus dans les états correspondants
